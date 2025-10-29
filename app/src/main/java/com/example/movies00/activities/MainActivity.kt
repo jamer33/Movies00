@@ -43,9 +43,9 @@ class MainActivity : AppCompatActivity() {
 
         adapter = MovieAdapter(filteredMovieList) { position ->
             val movie = filteredMovieList[position]
-            //val intent = Intent(this, DetailActivity::class.java)
-            //intent.putExtra(DetailActivity.EXTRA_RECIPE_ID, recipe.id)
-            //startActivity(intent)
+            val intent = Intent(this, DetailActivity::class.java)
+            intent.putExtra(DetailActivity.EXTRA_MOVIE_ID, movie.imdbID)
+            startActivity(intent)
         }
 
         binding.recyclerView.adapter = adapter
@@ -74,9 +74,7 @@ class MainActivity : AppCompatActivity() {
                             }
 
                         } catch (e: Exception) {
-                            // 5. Manejar posibles errores (ej: sin conexión a internet).
                             Log.e("API_ERROR", "Error al buscar películas", e)
-                            // Opcional: Mostrar un mensaje de error al usuario.
                         }
                     }
                     return true // Indicamos que hemos manejado la acción.
