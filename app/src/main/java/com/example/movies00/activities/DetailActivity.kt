@@ -64,8 +64,8 @@ class DetailActivity : AppCompatActivity() {
         binding.titleTextView.text = movie.title
         binding.yearTextView.text = movie.year
         binding.country.text = movie.country
-
         binding.duration.text = " " + (movie.runtime)
+        binding.directorTextView.text = movie.director
         binding.plotTextView.text = movie.plot
 
 

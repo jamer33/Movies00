@@ -23,19 +23,15 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="240dp">
+                android:layout_height="400dp">
 
 
                 <ImageView
                     android:id="@+id/thumbnailImageView"
                     android:layout_width="match_parent"
-                    android:layout_height="240dp"
-                    android:scaleType="centerCrop"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
                     android:src="@drawable/bg_image_placeholder"/>
-
-
-
-
 
 
             </FrameLayout>
@@ -146,7 +142,7 @@
                     android:textSize="18sp"
                     tools:text="Loren ipsum "
                     android:ellipsize="end"
-                    android:maxLines="2"/>
+                    />
 
             </LinearLayout>
 
